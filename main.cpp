@@ -25,7 +25,7 @@ int main() {
 	//double
 	printf("%f\n", Min<double>(1.414210356f, 3.2360679f));
 	//char
-	printf("%c\n", Min('a', 'x'));
+	printf("%c\n", Min<char>('a', 'x'));
 
 
 
