@@ -23,7 +23,7 @@ int main() {
 	//float 
 	printf("%f\n", Min<float>(15.2f, 31.4f));
 	//double
-	printf("%f\n", Min<double>(1.414210356f, 3.2360679f));
+	printf("%lf\n", Min<double>(1.414210356f, 3.2360679f));
 	//char
 	printf("%c\n", Min<char>('a', 'x'));
 
