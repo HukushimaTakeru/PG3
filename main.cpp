@@ -1,33 +1,31 @@
 #include<stdio.h>
 
-template <typename T>
-T Min(T a, T b) {
-	if ( a > b) {
-		return  b;
-	} else {
-		return  a;
-	}
-}
+int Recursive(int a , int b , int c ) {
+	
+	int kotei = a * c;
 
-template<>
-char Min<char>(char a, char b) {
-	printf("数字以外は代入出来ません");
-	return 0;
+	if (kotei < b ) {
+		printf("%d : %d : %d\n", kotei, b, c);
+
+		return (a,b,c);
+
+	}
+
+	printf("%d : %d : %d\n", kotei, b, c);
+
+	return Recursive( a,  b+(b * 2 - 50), c + 1 ); 
+
 }
 
 
 int main() {
 
-	//int 
-	printf("%d\n", Min<int>(10, 5));
-	//float 
-	printf("%f\n", Min<float>(15.2f, 31.4f));
-	//double
-	printf("%lf\n", Min<double>(1.414210356f, 3.2360679f));
-	//char
-	printf("%c\n", Min<char>('a', 'x'));
+	int a = 1070;//固定給料
+	int b = 100; // 変動給料
+	int x = 1; //労働時間
 
-
+	int result;
+	result = Recursive(a, b, x);
 
 	return 0;
 }
