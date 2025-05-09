@@ -5,6 +5,7 @@ int Recursive(int a , int b , int c ) {
 	int kotei = a * c;
 
 	if (kotei < b ) {
+
 		printf("%d : %d : %d\n", kotei, b, c);
 
 		return (a,b,c);
